@@ -1,89 +1,125 @@
 # Embroidered Logos for Zimbabwean High Schools
 
-Eaglesvale | Hartzell | Mtshabezi
+Eaglesvale | Kutama | Regina Mundi
 :---:|:---:|:---:
-![Eaglesvale](./EmbroideredLogos/Eaglesvale.png) | ![Hartzell](./EmbroideredLogos/hartzell.png) | ![Mtshabezi](./EmbroideredLogos/mtshabezi.png)
+![Eaglesvale High School embroidered logo](./EmbroideredLogos/Eaglesvale.png) | ![Kutama High School embroidered logo](./EmbroideredLogos/kutama.png) | ![Regina Mundi High School embroidered logo](./EmbroideredLogos/regina%20mundi.png)
 
-All Souls | Holy Cross | Mucheke
+St Peters (Mbare) Secondary | Kwenda | Roosevelt Girls
 :---:|:---:|:---:
-![All Souls](./EmbroideredLogos/all%20souls.png) | ![Holy Cross](./EmbroideredLogos/holy%20cross.png) | ![Mucheke](./EmbroideredLogos/mucheke.png)
+![St Peters (Mbare) Secondary embroidered logo](./EmbroideredLogos/St%20Peters%20(Mbare)%20Secondary.png) | ![Kwenda High School embroidered logo](./EmbroideredLogos/kwenda.png) | ![Roosevelt Girls High School embroidered logo](./EmbroideredLogos/roosevelt%20girls.png)
 
-Allan Wilson | Howard | Mukaro
+All Souls | Langham | Rusununguko
 :---:|:---:|:---:
-![Allan Wilson](./EmbroideredLogos/allan%20wilson.png) | ![Howard](./EmbroideredLogos/howard.png) | ![Mukaro](./EmbroideredLogos/mukaro.png)
+![All Souls High School embroidered logo](./EmbroideredLogos/all%20souls.png) | ![Langham High School embroidered logo](./EmbroideredLogos/langham.png) | ![Rusununguko High School embroidered logo](./EmbroideredLogos/rusununguko.png)
 
-Alpha College | Inyathi | Murewa
+Allan Wilson | Loreto | Ruya Adventist
 :---:|:---:|:---:
-![Alpha College](./EmbroideredLogos/alpha_college.png) | ![Inyathi](./EmbroideredLogos/inyathi.png) | ![Murewa](./EmbroideredLogos/murewa.png)
+![Allan Wilson High School embroidered logo](./EmbroideredLogos/allan%20wilson.png) | ![Loreto High School embroidered logo](./EmbroideredLogos/loreto.png) | ![Ruya Adventist High School embroidered logo](./EmbroideredLogos/ruya%20adventist.png)
 
-Anderson | Jameson | Mutendi
+Alpha College | Makumbe | Sandringham
 :---:|:---:|:---:
-![Anderson](./EmbroideredLogos/anderson.png) | ![Jameson](./EmbroideredLogos/jameson.png) | ![Mutendi](./EmbroideredLogos/mutendi.png)
+![Alpha College embroidered logo](./EmbroideredLogos/alpha_college.png) | ![Makumbe High School embroidered logo](./EmbroideredLogos/makumbe.png) | ![Sandringham High School embroidered logo](./EmbroideredLogos/sandringham.png)
 
-Bernard Mzeki | John Tallach | Nagle
+Anderson | Mandedza | Sanyati Baptist
 :---:|:---:|:---:
-![Bernard Mzeki](./EmbroideredLogos/bernard%20mzeki.png) | ![John Tallach](./EmbroideredLogos/john%20tallach.png) | ![Nagle](./EmbroideredLogos/nagle.png)
+![Anderson High School embroidered logo](./EmbroideredLogos/anderson.png) | ![Mandedza High School embroidered logo](./EmbroideredLogos/mandedza.png) | ![Sanyati Baptist High School embroidered logo](./EmbroideredLogos/sanyati%20baptist.png)
 
-Bradley | Kriste Mambo | Ndararama
+Bernard Mzeki | Marange | Serima
 :---:|:---:|:---:
-![Bradley](./EmbroideredLogos/bradley.png) | ![Kriste Mambo](./EmbroideredLogos/kriste%20mambo.png) | ![Ndararama](./EmbroideredLogos/ndararama.png)
+![Bernard Mzeki High School embroidered logo](./EmbroideredLogos/bernard%20mzeki.png) | ![Marange High School embroidered logo](./EmbroideredLogos/marange.png) | ![Serima High School embroidered logo](./EmbroideredLogos/serima.png)
 
-Chemanza | Kwenda | Nyahuni
+Bradley | Marist Brothers Nyanga | Shungu
 :---:|:---:|:---:
-![Chemanza](./EmbroideredLogos/chemanza.png) | ![Kwenda](./EmbroideredLogos/kwenda.png) | ![Nyahuni](./EmbroideredLogos/nyahuni.png)
+![Bradley High School embroidered logo](./EmbroideredLogos/bradley.png) | ![Marist Brothers Nyanga High School embroidered logo](./EmbroideredLogos/marist%20brothers%20nyanga.png) | ![Shungu High School embroidered logo](./EmbroideredLogos/shungu.png)
 
-Chibi | Langham | Nyashanu
+Chemanza | Marondera | Silveira
 :---:|:---:|:---:
-![Chibi](./EmbroideredLogos/chibi.png) | ![Langham](./EmbroideredLogos/langham.png) | ![Nyashanu](./EmbroideredLogos/nyashanu.png)
+![Chemanza High School embroidered logo](./EmbroideredLogos/chemanza.png) | ![Marondera High School embroidered logo](./EmbroideredLogos/marondera.png) | ![Silveira High School embroidered logo](./EmbroideredLogos/silveira.png)
 
-Chikwingwizhza | Loreto | Nyazura
+Chibi | Mashoko | St Alberts
 :---:|:---:|:---:
-![Chikwingwizhza](./EmbroideredLogos/chikwingwizhza.png) | ![Loreto](./EmbroideredLogos/loreto.png) | ![Nyazura](./EmbroideredLogos/nyazura.png)
+![Chibi High School embroidered logo](./EmbroideredLogos/chibi.png) | ![Mashoko High School embroidered logo](./EmbroideredLogos/mashoko.png) | ![St Alberts High School embroidered logo](./EmbroideredLogos/st%20alberts.png)
 
-Chindunduma | Makumbe | Pakame
+Chikwingwizhza | Mazowe | St Anne's Goto
 :---:|:---:|:---:
-![Chindunduma](./EmbroideredLogos/chindunduma.png) | ![Makumbe](./EmbroideredLogos/makumbe.png) | ![Pakame](./EmbroideredLogos/pakame.png)
+![Chikwingwizhza High School embroidered logo](./EmbroideredLogos/chikwingwizhza.png) | ![Mazowe High School embroidered logo](./EmbroideredLogos/mazowe.png) | ![St Anne's Goto High School embroidered logo](./EmbroideredLogos/st%20anne's%20goto.png)
 
-Chinhoyi 2 | Mandedza | Pamushana
+Chindunduma | Moleli | St Anthony Musiso
 :---:|:---:|:---:
-![Chinhoyi 2](./EmbroideredLogos/chinhoyi%202.png) | ![Mandedza](./EmbroideredLogos/mandedza.png) | ![Pamushana](./EmbroideredLogos/pamushana.png)
+![Chindunduma High School embroidered logo](./EmbroideredLogos/chindunduma.png) | ![Moleli High School embroidered logo](./EmbroideredLogos/moleli.png) | ![St Anthony Musiso High School embroidered logo](./EmbroideredLogos/st%20anthony%20musiso.png)
 
-Chinhoyi | Marange | Presbyterian
+Chinhoyi 2 | Monte Cassino | St Benedict's
 :---:|:---:|:---:
-![Chinhoyi](./EmbroideredLogos/chinhoyi.png) | ![Marange](./EmbroideredLogos/marange.png) | ![Presbyterian](./EmbroideredLogos/presbyterian.png)
+![Chinhoyi 2 High School embroidered logo](./EmbroideredLogos/chinhoyi%202.png) | ![Monte Cassino High School embroidered logo](./EmbroideredLogos/monte%20cassino.png) | ![St Benedict's High School embroidered logo](./EmbroideredLogos/st%20benedict's.png)
 
-Churchill | Marist Brothers Nyanga | Queen Elizabeth
+Chinhoyi | Msengezi | St Columba
 :---:|:---:|:---:
-![Churchill](./EmbroideredLogos/churchill.png) | ![Marist Brothers Nyanga](./EmbroideredLogos/marist%20brothers%20nyanga.png) | ![Queen Elizabeth](./EmbroideredLogos/queen%20elizabeth.png)
+![Chinhoyi High School embroidered logo](./EmbroideredLogos/chinhoyi.png) | ![Msengezi High School embroidered logo](./EmbroideredLogos/msengezi.png) | ![St Columba High School embroidered logo](./EmbroideredLogos/st%20columba.png)
 
-Dadaya | Marondera | Regina Mundi
+Churchill | Mt Selinda | St David's Bonda
 :---:|:---:|:---:
-![Dadaya](./EmbroideredLogos/dadaya.png) | ![Marondera](./EmbroideredLogos/marondera.png) | ![Regina Mundi](./EmbroideredLogos/regina%20mundi.png)
+![Churchill High School embroidered logo](./EmbroideredLogos/churchill.png) | ![Mt Selinda High School embroidered logo](./EmbroideredLogos/mt%20selinda.png) | ![St David's Bonda High School embroidered logo](./EmbroideredLogos/st%20david's%20bonda.png)
 
-Daramombe | Mashoko | Roosevelt Girls
+Dadaya | Mt St Mary's | St Dominics Chishawasha
 :---:|:---:|:---:
-![Daramombe](./EmbroideredLogos/daramombe.png) | ![Mashoko](./EmbroideredLogos/mashoko.png) | ![Roosevelt Girls](./EmbroideredLogos/roosevelt%20girls.png)
+![Dadaya High School embroidered logo](./EmbroideredLogos/dadaya.png) | ![Mt St Mary's High School embroidered logo](./EmbroideredLogos/mt%20st%20mary's.png) | ![St Dominics Chishawasha High School embroidered logo](./EmbroideredLogos/st%20dominics%20chishawasha.png)
 
-Emmanuel | Mazowe | Rusununguko
+Daramombe | Mtshabezi | St Faith's
 :---:|:---:|:---:
-![Emmanuel](./EmbroideredLogos/emmanuel.png) | ![Mazowe](./EmbroideredLogos/mazowe.png) | ![Rusununguko](./EmbroideredLogos/rusununguko.png)
+![Daramombe High School embroidered logo](./EmbroideredLogos/daramombe.png) | ![Mtshabezi High School embroidered logo](./EmbroideredLogos/mtshabezi.png) | ![St Faith's High School embroidered logo](./EmbroideredLogos/st%20faith's.png)
 
-Girls High Harare | Moleli | St Anne's Goto
+Emmanuel | Mucheke | St Francis of Assisi
 :---:|:---:|:---:
-![Girls High Harare](./EmbroideredLogos/girls%20high%20harare.png) | ![Moleli](./EmbroideredLogos/moleli.png) | ![St Anne's Goto](./EmbroideredLogos/st%20anne's%20goto.png)
+![Emmanuel High School embroidered logo](./EmbroideredLogos/emmanuel.png) | ![Mucheke High School embroidered logo](./EmbroideredLogos/mucheke.png) | ![St Francis of Assisi High School embroidered logo](./EmbroideredLogos/st%20francis%20of%20assisi.png)
 
-Gokomere | Monte Cassino | Waddilove
+Girls High Harare | Mufakose 1 High | St Ignatius
 :---:|:---:|:---:
-![Gokomere](./EmbroideredLogos/gokomere.png) | ![Monte Cassino](./EmbroideredLogos/monte%20cassino.png) | ![Waddilove](./EmbroideredLogos/waddilove.png)
+![Girls High Harare embroidered logo](./EmbroideredLogos/girls%20high%20harare.png) | ![Mufakose 1 High School embroidered logo](./EmbroideredLogos/mufakose%201%20high.png) | ![St Ignatius High School embroidered logo](./EmbroideredLogos/st%20ignatius.png)
 
-Goromonzi | Msengezi | Y
+Gokomere | Mukaro | St Johns Chikwaka
 :---:|:---:|:---:
-![Goromonzi](./EmbroideredLogos/goromonzi.png) | ![Msengezi](./EmbroideredLogos/msengezi.png) | ![Y](./EmbroideredLogos/y.png)
+![Gokomere High School embroidered logo](./EmbroideredLogos/gokomere.png) | ![Mukaro High School embroidered logo](./EmbroideredLogos/mukaro.png) | ![St Johns Chikwaka High School embroidered logo](./EmbroideredLogos/st%20johns%20chikwaka.png)
 
-Green Gables | Mt Selinda | —
+Goromonzi | Murewa | St Johns Emerald Hill
 :---:|:---:|:---:
-![Green Gables](./EmbroideredLogos/green%20gables.png) | ![Mt Selinda](./EmbroideredLogos/mt%20selinda.png) | 
+![Goromonzi High School embroidered logo](./EmbroideredLogos/goromonzi.png) | ![Murewa High School embroidered logo](./EmbroideredLogos/murewa.png) | ![St Johns Emerald Hill High School embroidered logo](./EmbroideredLogos/st%20johns%20emerald%20hill.png)
 
-Hama | Mt St Mary's | —
+Green Gables | Mutendi | St Joseph's
 :---:|:---:|:---:
-![Hama](./EmbroideredLogos/hama.png) | ![Mt St Mary's](./EmbroideredLogos/mt%20st%20mary's.png) | 
+![Green Gables High School embroidered logo](./EmbroideredLogos/green%20gables.png) | ![Mutendi High School embroidered logo](./EmbroideredLogos/mutendi.png) | ![St Joseph's High School embroidered logo](./EmbroideredLogos/st%20joseph's.png)
+
+Hama | Nagle | St Killians
+:---:|:---:|:---:
+![Hama High School embroidered logo](./EmbroideredLogos/hama.png) | ![Nagle High School embroidered logo](./EmbroideredLogos/nagle.png) | ![St Killians High School embroidered logo](./EmbroideredLogos/st%20killians.png)
+
+Hartzell | Ndararama | St Matthias
+:---:|:---:|:---:
+![Hartzell High School embroidered logo](./EmbroideredLogos/hartzell.png) | ![Ndararama High School embroidered logo](./EmbroideredLogos/ndararama.png) | ![St Matthias High School embroidered logo](./EmbroideredLogos/st%20matthias.png)
+
+Holy Cross | Nyahuni | St Michaels
+:---:|:---:|:---:
+![Holy Cross High School embroidered logo](./EmbroideredLogos/holy%20cross.png) | ![Nyahuni High School embroidered logo](./EmbroideredLogos/nyahuni.png) | ![St Michaels High School embroidered logo](./EmbroideredLogos/st%20michaels.png)
+
+Howard | Nyashanu | St Patrick
+:---:|:---:|:---:
+![Howard High School embroidered logo](./EmbroideredLogos/howard.png) | ![Nyashanu High School embroidered logo](./EmbroideredLogos/nyashanu.png) | ![St Patrick High School embroidered logo](./EmbroideredLogos/st%20patrick.png)
+
+Inyathi | Nyazura | St Pauls Musami
+:---:|:---:|:---:
+![Inyathi High School embroidered logo](./EmbroideredLogos/inyathi.png) | ![Nyazura High School embroidered logo](./EmbroideredLogos/nyazura.png) | ![St Pauls Musami High School embroidered logo](./EmbroideredLogos/st%20pauls%20musami.png)
+
+Jameson | Pakame | St Philips
+:---:|:---:|:---:
+![Jameson High School embroidered logo](./EmbroideredLogos/jameson.png) | ![Pakame High School embroidered logo](./EmbroideredLogos/pakame.png) | ![St Philips High School embroidered logo](./EmbroideredLogos/st%20philips.png)
+
+John Tallach | Pamushana | Thekwane
+:---:|:---:|:---:
+![John Tallach High School embroidered logo](./EmbroideredLogos/john%20tallach.png) | ![Pamushana High School embroidered logo](./EmbroideredLogos/pamushana.png) | ![Thekwane High School embroidered logo](./EmbroideredLogos/thekwane.png)
+
+Knowledgevill College | Presbyterian | Waddilove
+:---:|:---:|:---:
+![Knowledgevill College embroidered logo](./EmbroideredLogos/knowledgevill%20college.png) | ![Presbyterian High School embroidered logo](./EmbroideredLogos/presbyterian.png) | ![Waddilove High School embroidered logo](./EmbroideredLogos/waddilove.png)
+
+Kriste Mambo | Queen Elizabeth | —
+:---:|:---:|:---:
+![Kriste Mambo High School embroidered logo](./EmbroideredLogos/kriste%20mambo.png) | ![Queen Elizabeth High School embroidered logo](./EmbroideredLogos/queen%20elizabeth.png) | 
