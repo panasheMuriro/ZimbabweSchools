@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Panashe Muriro",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^1.20.0",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.5.0",
+    "fuse.js": "^7.1.0",
+    "node-vibrant": "^4.0.3",
+    "sharp": "^0.34.4"
+  }
+}
