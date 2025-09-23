@@ -1,0 +1,12 @@
+# In netlify.toml
+[build]
+  # This tells Netlify where your built frontend site is located
+  publish = "frontend/dist"
+  # This tells Netlify where your serverless functions are
+  functions = "netlify/functions"
+
+# This is the proxy rule, making frontend requests to /api/* work
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
