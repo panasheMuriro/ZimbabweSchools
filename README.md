@@ -120,6 +120,6 @@ Knowledgevill College | Presbyterian | Waddilove
 :---:|:---:|:---:
 ![Knowledgevill College embroidered logo](./EmbroideredLogosOptimized/knowledgevill_college.png) | ![Presbyterian High School embroidered logo](./EmbroideredLogosOptimized/presbyterian.png) | ![Waddilove High School embroidered logo](./EmbroideredLogosOptimized/waddilove.png)
 
-Kriste Mambo | Queen Elizabeth | —
+Kriste Mambo | Queen Elizabeth | Visitation Makumbi
 :---:|:---:|:---:
-![Kriste Mambo High School embroidered logo](./EmbroideredLogosOptimized/kriste_mambo.png) | ![Queen Elizabeth High School embroidered logo](./EmbroideredLogosOptimized/queen_elizabeth.png) | 
+![Kriste Mambo High School embroidered logo](./EmbroideredLogosOptimized/kriste_mambo.png) | ![Queen Elizabeth High School embroidered logo](./EmbroideredLogosOptimized/queen_elizabeth.png) |![Visitation Makumbi High School embroidered logo](./EmbroideredLogosOptimized/visitation_makumbi_high_school.png)  

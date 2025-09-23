@@ -8,7 +8,7 @@
   { "name": "Bradley High School", "imageUrl": "/logos/bradley.png" },
   { "name": "Anderson High School", "imageUrl": "/logos/anderson.png" },
   { "name": "Chibi High School", "imageUrl": "/logos/chibi.png" },
-  { "name": "Chikwingwizhza High School", "imageUrl": "/logos/chikwingwizhza.png" },
+  { "name": "Chikwingwizha High School", "imageUrl": "/logos/chikwingwizhza.png" },
   { "name": "Chemanza High School", "imageUrl": "/logos/chemanza.png" },
   { "name": "Chindunduma High School", "imageUrl": "/logos/chindunduma.png" },
   { "name": "Chinhoyi High School", "imageUrl": "/logos/chinhoyi.png" },
@@ -90,5 +90,6 @@
   { "name": "Thekwane High School", "imageUrl": "/logos/thekwane.png" },
   { "name": "St Pauls Musami High School", "imageUrl": "/logos/st_pauls_musami.png" },
   { "name": "St Philips High School", "imageUrl": "/logos/st_philips.png" },
-  { "name": "Waddilove High School", "imageUrl": "/logos/waddilove.png" }
+  { "name": "Waddilove High School", "imageUrl": "/logos/waddilove.png" },
+  { "name": "Visitation Makumbi High School", "imageUrl": "/logos/visitation_makumbi_high_school.png" }
 ]

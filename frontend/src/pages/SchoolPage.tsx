@@ -16,7 +16,7 @@ export default function SchoolPage() {
     setHtmlContent('');
     setError(null);
 
-    fetch(`/api/school/${encodeURIComponent(schoolName)}`)
+    fetch(`/api/schol/${encodeURIComponent(schoolName)}`)
       .then(async (res) => {
         if (!res.ok) {
           const errorText = await res.text();
