@@ -9,9 +9,13 @@ interface School {
   imageUrl: string;
 }
 
+const URL = "https://raw.githubusercontent.com/panasheMuriro/ZimbabweSchools/refs/heads/main/frontend/public"
+
+
 export default function HomePage() {
   const [schools, setSchools] = useState<School[]>([]);
   const [query, setQuery] = useState('');
+  
 
   useEffect(() => {
     // Fetch the list of schools from our JSON file
@@ -55,7 +59,7 @@ export default function HomePage() {
         {/* School Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
           {filteredSchools.map((school) => (
-            <SchoolCard key={school.name} name={school.name} imageUrl={school.imageUrl} />
+            <SchoolCard key={school.name} name={school.name} imageUrl={URL+school.imageUrl} />
           ))}
         </div>
       </main>
