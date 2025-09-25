@@ -13,6 +13,9 @@ import schoolData from '../../frontend/public/data/schools.json';
 
 // --- INITIALIZATION (runs on cold start) ---
 
+
+const URL = "https://raw.githubusercontent.com/panasheMuriro/ZimbabweSchools/refs/heads/main/frontend/public"
+
 if (!admin.apps.length) {
   const encodedServiceAccount = process.env.FIREBASE_SERVICE_ACCOUNT_BASE64;
   if (!encodedServiceAccount) {
@@ -81,7 +84,7 @@ const handler: Handler = async (event: HandlerEvent) => {
     // --- STEP 1: Find the official school name FIRST (Identical logic) ---
     const results = fuse.search(userQuery);
 
-    console.log()
+
 
 
     if (results.length === 0) {
@@ -89,10 +92,11 @@ const handler: Handler = async (event: HandlerEvent) => {
       return { statusCode: 404, body, headers: { 'Content-Type': 'text/html' } };
     }
 
-    const { name: officialName, logoUrl } = results[0].item;
+    const { name: officialName,imageUrl } = results[0].item;
+    let imageUrlFull = URL+imageUrl
     console.log(`[FOUND MATCH] Matched "${userQuery}" to "${officialName}"`);
 
-       const canonicalKey = officialName.toLowerCase().replace(/\s+/g, '-');
+    const canonicalKey = officialName.toLowerCase().replace(/\s+/g, '-');
     const schoolDocRef = db.collection('schools').doc(canonicalKey); // <-- Firestore doc reference
 
     // --- STEP 3: Check the cache (Redis -> Firestore) ---
@@ -111,19 +115,17 @@ const handler: Handler = async (event: HandlerEvent) => {
     }
 
     console.log(`[CACHE MISS] No entry for "${officialName}". Generating new page...`);
-
-
-    console.log(`[CACHE MISS] No entry for "${officialName}". Generating new page...`);
+    
 
     // --- YOUR EXISTING LOGIC - NO CHANGES ---
-    const paletteString = await getPaletteFromImageUrl(logoUrl);
+    const paletteString = await getPaletteFromImageUrl(imageUrlFull);
     const palette = Object.fromEntries(paletteString.split(', ').map(p => p.split(': ')));
     const promptText = `
       You are an expert web developer specializing in TailwindCSS. Your task is to generate a complete, single HTML file for a school website based on live web search results.
       **Instructions:**
       1. Create a modern, professional, and visually appealing school website for **${officialName} high school, Zimbabwe**.
       2. Use the **TailwindCSS** framework for all styling. You must include the Tailwind CDN script in the <head> section: <script src="https://cdn.tailwindcss.com"></script>.
-      3. Hero Section: Prominently feature the school's logo, found at this URL: **${logoUrl}**.
+      3. Hero Section: Prominently feature the school's logo, found at this URL: **${imageUrlFull}**.
       4. Color Palette: Strictly use the following colors for the theme:
           - Primary (headings, buttons): **${palette.primary}**
           - Secondary (backgrounds, borders): **${palette.secondary}**
@@ -131,14 +133,25 @@ const handler: Handler = async (event: HandlerEvent) => {
       5. Content (Crucial): Use your web search tool to find the most current and factual information about ${officialName}, Zimbabwe. Include sections for About Us, Academics, Admissions, and Contact Us.
       6. Contact Us Section: Ensure the physical address, phone number, and email are as accurate as possible based on your search results. Include a contact form.
       7. Contact Form: The form must not refresh the page on submission. Use an inline JavaScript onsubmit attribute to show an alert: alert('Thank you! We will get back to you shortly.'); return false;
+      8. For the image placeholders, just use the colored containers with colors coming from the color palette provided
       Generate only the full HTML code, starting with <!DOCTYPE html> and ending with </html>. Do not wrap your response in markdown.
     `;
     
+    // const response = await ai.models.generateContent({
+    //   model: "gemini-2.5-flash-lite",
+    //   contents: [{ role: "user", parts: [{ text: promptText }] }],
+    //   config: { tools: [{ googleSearchRetrieval: {} }] }
+    // });
+
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash-lite",
-      contents: [{ role: "user", parts: [{ text: promptText }] }],
-      config: { tools: [{ googleSearchRetrieval: {} }] }
-    });
+  model: "gemini-2.5-flash-lite", // Use a model that supports grounding
+  contents: [{ role: "user", parts: [{ text: promptText }] }],
+  config: { 
+    tools: [{ 
+      googleSearch: {} // Use googleSearch instead of googleSearchRetrieval
+    }] 
+  }
+});
 
     const generatedHtml = response.text;
     console.log(`Generated HTML for ${officialName}`);

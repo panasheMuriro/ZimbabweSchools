@@ -26,7 +26,7 @@ fs.readdirSync(inputDir).forEach(async (file) => {
   try {
     await sharp(inputPath)
       .resize({ width: 800 }) // ✅ resize to max width 400px (adjust as needed)
-      .toFormat("webp", { quality: 100 }) // ✅ compress & save as WebP
+      .toFormat("jpg", { quality: 100 }) // ✅ compress & save as WebP
       .toFile(outputPath);
 
     console.log(`Optimized: ${outputPath}`);
