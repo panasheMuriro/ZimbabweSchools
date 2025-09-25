@@ -1,18 +1,9 @@
-// In netlify/functions/school.ts
-
 import { Handler, HandlerEvent } from "@netlify/functions";
 import { GoogleGenAI } from '@google/genai';
 import Fuse from 'fuse.js';
-// import Vibrant from 'node-vibrant'; // This works on Netlify!
 import { Vibrant } from "node-vibrant/node";
 import admin from 'firebase-admin'; 
-
-// Import the school data. Netlify will bundle this.
-// Make sure the path is correct relative to this function file.
 import schoolData from '../../frontend/public/data/schools.json';
-
-// --- INITIALIZATION (runs on cold start) ---
-
 
 const URL = "https://raw.githubusercontent.com/panasheMuriro/ZimbabweSchools/refs/heads/main/frontend/public"
 
@@ -28,11 +19,7 @@ if (!admin.apps.length) {
     credential: admin.credential.cert(serviceAccount),
   });
 }
-const db = admin.firestore(); // Initialize Firestore
-
-
-// Initialize Gemini AI client
-// const ai = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+const db = admin.firestore(); 
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
@@ -41,21 +28,15 @@ interface School {
     imageUrl: string;
 }
 
-
-// Initialize Fuse.js (Identical to your Express setup)
 const schoolList: School[] = schoolData;
-
-// Initialize Fuse with the correct list.
 const fuse = new Fuse(schoolList, {
   keys: ['name'],
   includeScore: true,
   threshold: 0.4,
 });
 
-
 console.log(schoolList)
 
-// Your existing color extraction function - NO CHANGES NEEDED
 async function getPaletteFromImageUrl(imageUrl: string) {
   try {
     const palette = await Vibrant.from(imageUrl).getPalette();
@@ -71,53 +52,55 @@ async function getPaletteFromImageUrl(imageUrl: string) {
   }
 }
 
-// The main handler function for our serverless endpoint
 const handler: Handler = async (event: HandlerEvent) => {
-  // Get the user query from the URL path, e.g., /api/school/bradley
-  const userQuery = event.path.split("/").pop() || "";
+  
+  const queryParams = event.queryStringParameters || {};
+  const forceNew = queryParams.new === 'true';
+  
+  
+  const pathParts = event.path.split("/");
+  const userQuery = pathParts[pathParts.length - 1].split("?")[0] || ""; 
 
   if (!userQuery) {
     return { statusCode: 400, body: 'Missing school name query.' };
   }
 
   try {
-    // --- STEP 1: Find the official school name FIRST (Identical logic) ---
     const results = fuse.search(userQuery);
-
-
-
 
     if (results.length === 0) {
       const body = '<h1>School Not Found</h1><p>We could not find a match for this school in our records.</p>';
       return { statusCode: 404, body, headers: { 'Content-Type': 'text/html' } };
     }
 
-    const { name: officialName,imageUrl } = results[0].item;
-    let imageUrlFull = URL+imageUrl
+    const { name: officialName, imageUrl } = results[0].item;
+    let imageUrlFull = URL + imageUrl;
     console.log(`[FOUND MATCH] Matched "${userQuery}" to "${officialName}"`);
 
     const canonicalKey = officialName.toLowerCase().replace(/\s+/g, '-');
-    const schoolDocRef = db.collection('schools').doc(canonicalKey); // <-- Firestore doc reference
+    const schoolDocRef = db.collection('schools').doc(canonicalKey); 
 
-    // --- STEP 3: Check the cache (Redis -> Firestore) ---
-    const docSnap = await schoolDocRef.get();
-
-    if (docSnap.exists) {
-      const data = docSnap.data()!;
-      // **MANUAL TTL CHECK**: Check if the cache entry has expired
-      const expiresAt = data.expiresAt?.toDate(); // Firestore timestamps need conversion
-      if (expiresAt && expiresAt > new Date()) {
-        console.log(`[CACHE HIT] Found valid entry for "${officialName}" in Firestore.`);
-        return { statusCode: 200, body: data.html, headers: { 'Content-Type': 'text/html' } };
-      } else if (expiresAt) {
-          console.log(`[CACHE STALE] Entry for "${officialName}" has expired. Regenerating.`);
-      }
-    }
-
-    console.log(`[CACHE MISS] No entry for "${officialName}". Generating new page...`);
     
+    if (!forceNew) {
+      const docSnap = await schoolDocRef.get();
 
-    // --- YOUR EXISTING LOGIC - NO CHANGES ---
+      if (docSnap.exists) {
+        const data = docSnap.data()!;
+        const expiresAt = data.expiresAt?.toDate(); 
+        
+        if (expiresAt && expiresAt > new Date()) {
+          console.log(`[CACHE HIT] Found valid entry for "${officialName}" in Firestore.`);
+          return { statusCode: 200, body: data.html, headers: { 'Content-Type': 'text/html' } };
+        } else if (expiresAt) {
+          console.log(`[CACHE STALE] Entry for "${officialName}" has expired. Regenerating.`);
+        }
+      }
+      console.log(`[CACHE MISS] No entry for "${officialName}". Generating new page...`);
+    } else {
+      console.log(`[FORCE NEW] Forcing regeneration for "${officialName}" (new=true parameter).`);
+    }
+  
+    
     const paletteString = await getPaletteFromImageUrl(imageUrlFull);
     const palette = Object.fromEntries(paletteString.split(', ').map(p => p.split(': ')));
     const promptText = `
@@ -134,39 +117,35 @@ const handler: Handler = async (event: HandlerEvent) => {
       6. Contact Us Section: Ensure the physical address, phone number, and email are as accurate as possible based on your search results. Include a contact form.
       7. Contact Form: The form must not refresh the page on submission. Use an inline JavaScript onsubmit attribute to show an alert: alert('Thank you! We will get back to you shortly.'); return false;
       8. For the image placeholders, just use the colored containers with colors coming from the color palette provided
+      9. Make sure the contrast of the colors for text make everything readable. No white text on white, black text on black etc
       Generate only the full HTML code, starting with <!DOCTYPE html> and ending with </html>. Do not wrap your response in markdown.
     `;
-    
-    // const response = await ai.models.generateContent({
-    //   model: "gemini-2.5-flash-lite",
-    //   contents: [{ role: "user", parts: [{ text: promptText }] }],
-    //   config: { tools: [{ googleSearchRetrieval: {} }] }
-    // });
 
     const response = await ai.models.generateContent({
-  model: "gemini-2.5-flash-lite", // Use a model that supports grounding
-  contents: [{ role: "user", parts: [{ text: promptText }] }],
-  config: { 
-    tools: [{ 
-      googleSearch: {} // Use googleSearch instead of googleSearchRetrieval
-    }] 
-  }
-});
+      model: "gemini-2.5-flash-lite", 
+      contents: [{ role: "user", parts: [{ text: promptText }] }],
+      config: { 
+        tools: [{ 
+          googleSearch: {} 
+        }] 
+      }
+    });
 
     const generatedHtml = response.text;
     console.log(`Generated HTML for ${officialName}`);
 
-    // --- STEP 4: Save to cache (Firestore -> Redis) ---
-    // Cache for 1 week (604800 seconds)
-      const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+    // Cache for 1 day
+    const expiresAt = new Date(Date.now() + 1 * 24 * 60 * 60 * 1000);
 
     await schoolDocRef.set({
       name: officialName,
       html: generatedHtml,
-      expiresAt: expiresAt, // Store the expiration timestamp
+      expiresAt: expiresAt,
+      lastUpdated: new Date(), 
+      forcedRegeneration: forceNew 
     });
-    console.log(`[CACHE SET] Saved page for "${officialName}" to Firestore.`);
-
+    
+    console.log(`[CACHE SET] Saved page for "${officialName}" to Firestore${forceNew ? ' (forced regeneration)' : ''}.`);
 
     return {
       statusCode: 200,
